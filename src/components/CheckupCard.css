@@ -1,0 +1,232 @@
+.checkup-card {
+  transition: all 0.4s ease;
+}
+
+/* === Collapsed / Idle State === */
+.checkup-collapsed {
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.checkup-collapsed:hover {
+  transform: scale(1.01);
+}
+
+.checkup-collapsed-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.checkup-ai-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #008751, #00a86b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.checkup-collapsed-content {
+  flex: 1;
+}
+
+.checkup-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ck-green);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.checkup-eyebrow .new-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--ck-badge-red);
+  border-radius: 50%;
+}
+
+.checkup-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ck-text-primary);
+  margin-bottom: 4px;
+}
+
+.checkup-subtitle {
+  font-size: 13px;
+  color: var(--ck-text-secondary);
+  line-height: 1.4;
+}
+
+.checkup-cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+
+.checkup-start-btn {
+  padding: 10px 20px;
+  background: var(--ck-green);
+  color: white;
+  border: none;
+  border-radius: var(--ck-radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--ck-font);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.checkup-start-btn:hover {
+  background: #007500;
+}
+
+.checkup-start-btn:active {
+  transform: scale(0.97);
+}
+
+.checkup-time-est {
+  font-size: 12px;
+  color: var(--ck-text-tertiary);
+}
+
+/* === Expanded States === */
+.checkup-expanded {
+  padding: 20px;
+}
+
+.checkup-expanded-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--ck-divider);
+}
+
+.checkup-expanded-header .checkup-ai-icon {
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+}
+
+.checkup-expanded-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ck-text-primary);
+}
+
+.checkup-expanded-subtitle {
+  font-size: 12px;
+  color: var(--ck-text-secondary);
+}
+
+/* === Analyzing State === */
+.analyzing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  animation: fadeIn 0.4s ease;
+}
+
+.analyzing-ring {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 3px solid var(--ck-divider);
+  border-top-color: var(--ck-green);
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.analyzing-dots {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.analyzing-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--ck-green);
+  border-radius: 50%;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.analyzing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.analyzing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.analyzing-status {
+  font-size: 14px;
+  color: var(--ck-text-secondary);
+  text-align: center;
+  min-height: 20px;
+  transition: opacity 0.3s;
+}
+
+.analyzing-progress-bar {
+  width: 100%;
+  height: 4px;
+  background: var(--ck-divider);
+  border-radius: 2px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.analyzing-progress-fill {
+  height: 100%;
+  background: var(--ck-green);
+  border-radius: 2px;
+  transition: width 0.5s ease;
+}
+
+/* === Findings List === */
+.findings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.findings-summary-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: var(--ck-green-light);
+  border-radius: var(--ck-radius-md);
+  margin-bottom: 4px;
+  animation: slideUp 0.4s ease;
+}
+
+.findings-summary-icon {
+  font-size: 18px;
+}
+
+.findings-summary-text {
+  font-size: 13px;
+  color: var(--ck-green);
+  font-weight: 600;
+}
+
+.see-results-btn {
+  margin-top: 8px;
+  animation: slideUp 0.5s ease;
+  animation-fill-mode: both;
+}

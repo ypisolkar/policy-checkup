@@ -1,0 +1,148 @@
+.finding-step {
+  padding: 16px;
+  background: #fafbfc;
+  border-radius: var(--ck-radius-md);
+  border: 1px solid var(--ck-divider);
+  animation: slideUp 0.5s ease both;
+}
+
+.finding-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.finding-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.finding-header-content {
+  flex: 1;
+}
+
+.finding-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ck-text-primary);
+  margin-bottom: 4px;
+}
+
+.finding-description {
+  font-size: 13px;
+  color: var(--ck-text-secondary);
+  line-height: 1.5;
+}
+
+.finding-recommendation {
+  margin-top: 12px;
+  padding: 12px;
+  background: white;
+  border-radius: var(--ck-radius-sm);
+  border-left: 3px solid var(--ck-green);
+}
+
+.finding-rec-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ck-green);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.finding-rec-text {
+  font-size: 13px;
+  color: var(--ck-text-primary);
+  line-height: 1.5;
+}
+
+.finding-details {
+  margin-top: 10px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.finding-details.collapsed {
+  max-height: 0;
+}
+
+.finding-details.expanded {
+  max-height: 500px;
+}
+
+.finding-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.finding-detail-list li {
+  font-size: 12px;
+  color: var(--ck-text-secondary);
+  padding: 4px 0;
+  padding-left: 14px;
+  position: relative;
+}
+
+.finding-detail-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--ck-text-tertiary);
+}
+
+.finding-savings {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: var(--ck-green-light);
+  border-radius: var(--ck-radius-sm);
+}
+
+.finding-savings-label {
+  font-size: 12px;
+  color: var(--ck-text-secondary);
+}
+
+.finding-savings-amount {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ck-green);
+}
+
+.finding-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+  background: none;
+  border: none;
+  color: var(--ck-green);
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--ck-font);
+  cursor: pointer;
+  padding: 0;
+}
+
+.finding-toggle:hover {
+  text-decoration: underline;
+}
+
+.finding-toggle-arrow {
+  display: inline-block;
+  transition: transform 0.2s;
+  font-size: 10px;
+}
+
+.finding-toggle-arrow.expanded {
+  transform: rotate(180deg);
+}

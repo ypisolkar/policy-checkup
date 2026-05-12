@@ -1,0 +1,143 @@
+.policy-card {
+  padding: 20px;
+}
+
+.policy-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.carrier-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.carrier-info {
+  flex: 1;
+}
+
+.carrier-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ck-text-primary);
+}
+
+.policy-number {
+  font-size: 12px;
+  color: var(--ck-text-tertiary);
+  margin-top: 1px;
+}
+
+.premium-display {
+  text-align: right;
+}
+
+.premium-amount {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ck-text-primary);
+}
+
+.premium-freq {
+  font-size: 13px;
+  color: var(--ck-text-secondary);
+}
+
+.policy-divider {
+  height: 1px;
+  background: var(--ck-divider);
+  margin: 0 -20px;
+}
+
+.policy-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.policy-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.detail-label {
+  font-size: 11px;
+  color: var(--ck-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-size: 14px;
+  color: var(--ck-text-primary);
+  font-weight: 600;
+}
+
+.coverage-section {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--ck-divider);
+}
+
+.coverage-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ck-text-secondary);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.coverage-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.coverage-row:not(:last-child) {
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.coverage-label {
+  font-size: 13px;
+  color: var(--ck-text-secondary);
+}
+
+.coverage-value {
+  font-size: 13px;
+  color: var(--ck-text-primary);
+  font-weight: 500;
+}
+
+.connected-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  background: var(--ck-green-light);
+  color: var(--ck-green);
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 14px;
+}
+
+.connected-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--ck-green);
+  border-radius: 50%;
+}
