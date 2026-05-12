@@ -1,148 +1,110 @@
-.results-summary {
-  animation: slideUp 0.5s ease;
-}
+.results-summary { animation: slideUp 0.5s ease; }
 
 .results-header {
   text-align: center;
-  padding: 24px 20px;
-  background: linear-gradient(135deg, #f0faf2, #e6f4ea);
-  border-radius: var(--ck-radius-md);
+  padding: 20px 16px;
+  background: #f0f7ff;
+  border-radius: var(--kds-radius-card);
   margin-bottom: 20px;
+  border: 1px solid rgba(34,104,246,0.1);
 }
-
-.results-check-icon {
-  font-size: 40px;
-  margin-bottom: 8px;
-}
-
+.results-check-icon { font-size: 36px; margin-bottom: 8px; }
 .results-headline {
-  font-size: 18px;
   font-weight: 700;
-  color: var(--ck-text-primary);
+  font-size: 20px;
+  line-height: 1.15;
+  color: var(--kds-color-text-primary);
   margin-bottom: 4px;
 }
-
 .results-subhead {
-  font-size: 13px;
-  color: var(--ck-text-secondary);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--kds-color-text-secondary);
 }
 
-.results-savings-block {
-  text-align: center;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
+.results-savings-block { text-align: center; padding: 16px; margin-bottom: 16px; }
 .results-savings-label {
-  font-size: 12px;
-  color: var(--ck-text-secondary);
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--kds-color-text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  font-weight: 500;
   margin-bottom: 4px;
 }
-
 .results-savings-amount {
-  font-size: 42px;
-  font-weight: 800;
-  color: var(--ck-green);
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--kds-color-action-fill);
   letter-spacing: -1px;
 }
-
 .results-savings-period {
-  font-size: 14px;
-  color: var(--ck-text-secondary);
+  font-size: 17px;
+  color: var(--kds-color-text-secondary);
   font-weight: 400;
 }
 
-.results-findings-recap {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
-  padding: 0 4px;
-}
-
+.results-findings-recap { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
 .recap-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   padding: 10px 12px;
-  background: #fafbfc;
-  border-radius: var(--ck-radius-sm);
+  background: white;
+  border-radius: var(--kds-radius-button);
+  border: 1px solid var(--kds-color-divider-item);
 }
-
-.recap-icon {
-  font-size: 20px;
-  flex-shrink: 0;
-}
-
-.recap-content {
-  flex: 1;
-}
-
+.recap-icon { font-size: 18px; flex-shrink: 0; }
+.recap-content { flex: 1; }
 .recap-title {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--ck-text-primary);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.15;
+  color: var(--kds-color-text-primary);
 }
-
 .recap-savings {
-  font-size: 12px;
-  color: var(--ck-green);
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--kds-color-action-fill);
 }
-
 .recap-check {
-  color: var(--ck-green);
+  color: var(--kds-color-action-fill);
   font-size: 16px;
+  font-weight: 700;
 }
 
-.results-cta-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 16px;
-}
+.results-cta-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; }
 
-.results-share-link {
-  text-align: center;
-}
-
+.results-share-link { text-align: center; }
 .results-share-link button {
   background: none;
   border: none;
-  color: var(--ck-green);
-  font-size: 13px;
-  font-weight: 600;
-  font-family: var(--ck-font);
+  color: var(--kds-color-action-text);
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--kds-font-family);
   cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 2px;
 }
 
 .results-footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  padding: 12px;
-  border-top: 1px solid var(--ck-divider);
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--kds-color-divider-item);
   margin-top: 8px;
 }
-
 .results-footer-text {
   font-size: 11px;
-  color: var(--ck-text-tertiary);
+  color: var(--kds-color-text-secondary);
 }
-
 .results-reset {
   background: none;
   border: none;
-  color: var(--ck-text-tertiary);
+  color: var(--kds-color-text-secondary);
   font-size: 11px;
-  font-family: var(--ck-font);
+  font-family: var(--kds-font-family);
   cursor: pointer;
   text-decoration: underline;
-  padding: 0;
 }

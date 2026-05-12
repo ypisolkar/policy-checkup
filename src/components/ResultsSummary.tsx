@@ -34,11 +34,10 @@ export default function ResultsSummary({ onReset }: Props) {
   return (
     <div className="results-summary">
       <div className="results-header">
-        <div className="results-check-icon">✅</div>
-        <div className="results-headline">Check-up Complete</div>
+        <div className="results-check-icon">&#x2705;</div>
+        <div className="results-headline">Check-up complete</div>
         <div className="results-subhead">
-          We found {gapCount} coverage gaps and {savingsCount} savings
-          opportunities
+          We found {gapCount} coverage gaps and {savingsCount} savings opportunities
         </div>
       </div>
 
@@ -57,23 +56,17 @@ export default function ResultsSummary({ onReset }: Props) {
             <div className="recap-content">
               <div className="recap-title">{f.title}</div>
               {f.potentialSavings && (
-                <div className="recap-savings">
-                  Save ${f.potentialSavings}/mo
-                </div>
+                <div className="recap-savings">Save ${f.potentialSavings}/mo</div>
               )}
             </div>
-            <span className="recap-check">✓</span>
+            <span className="recap-check">&#x2713;</span>
           </div>
         ))}
       </div>
 
       <div className="results-cta-group">
-        <button className="ck-btn-primary">
-          🛒 Shop Better Rates
-        </button>
-        <button className="ck-btn-secondary">
-          📋 Update Your Policy
-        </button>
+        <button className="kds-btn-solid">Shop better rates</button>
+        <button className="kds-btn-text">Update your policy</button>
       </div>
 
       <div className="results-share-link">
@@ -81,12 +74,8 @@ export default function ResultsSummary({ onReset }: Props) {
       </div>
 
       <div className="results-footer">
-        <span className="results-footer-text">
-          Powered by Intuit AI · Based on your connected policy data
-        </span>
-        <button className="results-reset" onClick={onReset}>
-          Start over
-        </button>
+        <span className="results-footer-text">Powered by Intuit Assist</span>
+        <button className="results-reset" onClick={onReset}>Start over</button>
       </div>
     </div>
   );

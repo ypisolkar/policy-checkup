@@ -1,53 +1,81 @@
 .finding-step {
   padding: 16px;
-  background: #fafbfc;
-  border-radius: var(--ck-radius-md);
-  border: 1px solid var(--ck-divider);
+  background: white;
+  border-radius: var(--kds-radius-card);
+  border: 1px solid var(--kds-color-divider-item);
   animation: slideUp 0.5s ease both;
 }
 
 .finding-header {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 10px;
 }
 
 .finding-icon {
-  font-size: 24px;
+  font-size: 20px;
   flex-shrink: 0;
   margin-top: 2px;
 }
 
-.finding-header-content {
-  flex: 1;
+.finding-header-content { flex: 1; }
+
+.finding-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.finding-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.finding-badge.gap { background: #fef0ec; color: #cc2200; }
+.finding-badge.rightsize { background: #fff8e1; color: #b8860b; }
+.finding-badge.savings { background: #e6f4ea; color: #008600; }
+
+.finding-severity {
+  font-weight: 500;
+  font-size: 11px;
+  color: #cc2200;
 }
 
 .finding-title {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--ck-text-primary);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.15;
+  color: var(--kds-color-text-primary);
   margin-bottom: 4px;
 }
 
 .finding-description {
-  font-size: 13px;
-  color: var(--ck-text-secondary);
-  line-height: 1.5;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--kds-color-text-secondary);
 }
 
 .finding-recommendation {
   margin-top: 12px;
   padding: 12px;
-  background: white;
-  border-radius: var(--ck-radius-sm);
-  border-left: 3px solid var(--ck-green);
+  background: #f8f9fa;
+  border-radius: var(--kds-radius-button);
+  border-left: 3px solid var(--kds-color-logo-intuit);
 }
 
 .finding-rec-label {
+  font-weight: 500;
   font-size: 11px;
-  font-weight: 600;
-  color: var(--ck-green);
+  color: var(--kds-color-logo-intuit);
   text-transform: uppercase;
   letter-spacing: 0.4px;
   margin-bottom: 4px;
@@ -57,44 +85,10 @@
 }
 
 .finding-rec-text {
-  font-size: 13px;
-  color: var(--ck-text-primary);
-  line-height: 1.5;
-}
-
-.finding-details {
-  margin-top: 10px;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-
-.finding-details.collapsed {
-  max-height: 0;
-}
-
-.finding-details.expanded {
-  max-height: 500px;
-}
-
-.finding-detail-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.finding-detail-list li {
-  font-size: 12px;
-  color: var(--ck-text-secondary);
-  padding: 4px 0;
-  padding-left: 14px;
-  position: relative;
-}
-
-.finding-detail-list li::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: var(--ck-text-tertiary);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--kds-color-text-primary);
 }
 
 .finding-savings {
@@ -103,19 +97,20 @@
   gap: 6px;
   margin-top: 10px;
   padding: 8px 12px;
-  background: var(--ck-green-light);
-  border-radius: var(--ck-radius-sm);
+  background: #e6f4ea;
+  border-radius: var(--kds-radius-button);
 }
 
 .finding-savings-label {
-  font-size: 12px;
-  color: var(--ck-text-secondary);
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--kds-color-text-secondary);
 }
 
 .finding-savings-amount {
-  font-size: 15px;
   font-weight: 700;
-  color: var(--ck-green);
+  font-size: 15px;
+  color: var(--kds-color-action-fill);
 }
 
 .finding-toggle {
@@ -125,16 +120,12 @@
   margin-top: 8px;
   background: none;
   border: none;
-  color: var(--ck-green);
-  font-size: 12px;
-  font-weight: 600;
-  font-family: var(--ck-font);
+  color: var(--kds-color-action-text);
+  font-size: 13px;
+  font-weight: 500;
+  font-family: var(--kds-font-family);
   cursor: pointer;
   padding: 0;
-}
-
-.finding-toggle:hover {
-  text-decoration: underline;
 }
 
 .finding-toggle-arrow {
@@ -143,6 +134,30 @@
   font-size: 10px;
 }
 
-.finding-toggle-arrow.expanded {
-  transform: rotate(180deg);
+.finding-toggle-arrow.expanded { transform: rotate(180deg); }
+
+.finding-details {
+  margin-top: 8px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.finding-details.collapsed { max-height: 0; }
+.finding-details.expanded { max-height: 500px; }
+
+.finding-detail-list {
+  list-style: none;
+  padding: 0;
+}
+.finding-detail-list li {
+  font-size: 13px;
+  color: var(--kds-color-text-secondary);
+  padding: 3px 0 3px 14px;
+  position: relative;
+  line-height: 1.4;
+}
+.finding-detail-list li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  color: #aaa;
 }

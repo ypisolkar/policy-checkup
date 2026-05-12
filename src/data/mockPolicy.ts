@@ -34,11 +34,11 @@ export interface Finding {
 }
 
 export const mockPolicy: PolicyData = {
-  carrier: { name: 'State Farm', logoInitials: 'SF', color: '#E31837' },
-  premium: { amount: 187, frequency: 'mo' },
-  renewal: { date: 'Sep 15, 2026' },
+  carrier: { name: 'Liberty Mutual', logoInitials: 'LM', color: '#003B71' },
+  premium: { amount: 249, frequency: 'mo' },
+  renewal: { date: 'Sep, 2026' },
   coverageLevel: 'Full Coverage',
-  policyNumber: 'SF-8847291',
+  policyNumber: 'LM-4429183',
   vehicles: [
     { year: 2022, make: 'Honda', model: 'Accord' },
   ],

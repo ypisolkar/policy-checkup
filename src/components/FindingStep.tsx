@@ -12,31 +12,20 @@ export default function FindingStep({ finding, index }: Props) {
 
   const categoryLabel =
     finding.category === 'gap'
-      ? 'Coverage Gap'
+      ? 'Coverage gap'
       : finding.category === 'rightsize'
         ? 'Right-size'
         : 'Savings';
 
   return (
-    <div
-      className="finding-step"
-      style={{ animationDelay: `${index * 0.35}s` }}
-    >
+    <div className="finding-step" style={{ animationDelay: `${index * 0.35}s` }}>
       <div className="finding-header">
         <span className="finding-icon">{finding.icon}</span>
         <div className="finding-header-content">
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6 }}>
-            <span className={`ck-badge ${finding.category}`}>{categoryLabel}</span>
+          <div className="finding-badge-row">
+            <span className={`finding-badge ${finding.category}`}>{categoryLabel}</span>
             {finding.severity === 'high' && (
-              <span
-                style={{
-                  fontSize: 11,
-                  color: 'var(--ck-badge-red)',
-                  fontWeight: 600,
-                }}
-              >
-                Action needed
-              </span>
+              <span className="finding-severity">Action needed</span>
             )}
           </div>
           <div className="finding-title">{finding.title}</div>
@@ -45,33 +34,22 @@ export default function FindingStep({ finding, index }: Props) {
       </div>
 
       <div className="finding-recommendation">
-        <div className="finding-rec-label">
-          <span>✦</span> Intuit AI Recommendation
-        </div>
+        <div className="finding-rec-label">Intuit Assist recommendation</div>
         <div className="finding-rec-text">{finding.recommendation}</div>
       </div>
 
       {finding.potentialSavings && (
         <div className="finding-savings">
           <span className="finding-savings-label">Potential savings</span>
-          <span className="finding-savings-amount">
-            ${finding.potentialSavings}/mo
-          </span>
+          <span className="finding-savings-amount">${finding.potentialSavings}/mo</span>
         </div>
       )}
 
       {finding.details && finding.details.length > 0 && (
         <>
-          <button
-            className="finding-toggle"
-            onClick={() => setExpanded(!expanded)}
-          >
+          <button className="finding-toggle" onClick={() => setExpanded(!expanded)}>
             {expanded ? 'Hide details' : 'See details'}
-            <span
-              className={`finding-toggle-arrow ${expanded ? 'expanded' : ''}`}
-            >
-              ▼
-            </span>
+            <span className={`finding-toggle-arrow ${expanded ? 'expanded' : ''}`}>&#9660;</span>
           </button>
           <div className={`finding-details ${expanded ? 'expanded' : 'collapsed'}`}>
             <ul className="finding-detail-list">

@@ -1,143 +1,133 @@
+/* KDS Coverage Card — matches Figma exactly */
 .policy-card {
-  padding: 20px;
+  /* uses .kds-card from App.css */
 }
 
-.policy-card-header {
+.policy-row-item {
   display: flex;
+  gap: 16px;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
+  padding-bottom: 16px;
 }
 
-.carrier-logo {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: 700;
-  font-size: 16px;
+.policy-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 1000px;
+  object-fit: cover;
   flex-shrink: 0;
 }
 
-.carrier-info {
+.policy-row-content {
   flex: 1;
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
-.carrier-name {
+.policy-carrier-name {
+  flex: 1;
+  font-weight: 500;
   font-size: 17px;
-  font-weight: 700;
-  color: var(--ck-text-primary);
+  line-height: 1.15;
+  color: var(--kds-color-text-primary);
 }
 
-.policy-number {
-  font-size: 12px;
-  color: var(--ck-text-tertiary);
-  margin-top: 1px;
+.policy-see-details {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.15;
+  color: var(--kds-color-action-text);
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: var(--kds-font-family);
+  white-space: nowrap;
 }
 
-.premium-display {
-  text-align: right;
+/* Key Value Grid */
+.policy-kv-grid {
+  display: flex;
+  gap: 16px;
 }
 
-.premium-amount {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--ck-text-primary);
-}
-
-.premium-freq {
-  font-size: 13px;
-  color: var(--ck-text-secondary);
-}
-
-.policy-divider {
-  height: 1px;
-  background: var(--ck-divider);
-  margin: 0 -20px;
-}
-
-.policy-details {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-top: 16px;
-}
-
-.policy-detail-item {
+.policy-kv-item {
+  flex: 1;
+  padding: 16px 16px 16px 0;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 6px;
 }
 
-.detail-label {
-  font-size: 11px;
-  color: var(--ck-text-tertiary);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.policy-kv-item:first-child {
+  border-right: 1px solid var(--kds-color-divider-item);
+}
+
+.policy-kv-label {
   font-weight: 500;
+  font-size: 15px;
+  line-height: 1.15;
+  color: var(--kds-color-text-primary);
 }
 
-.detail-value {
-  font-size: 14px;
-  color: var(--ck-text-primary);
-  font-weight: 600;
+.policy-kv-value {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  color: var(--kds-color-text-primary);
 }
 
-.coverage-section {
-  margin-top: 16px;
+/* Payment Rating */
+.payment-rating-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   padding-top: 16px;
-  border-top: 1px solid var(--ck-divider);
 }
 
-.coverage-title {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--ck-text-secondary);
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-}
-
-.coverage-row {
+.payment-rating-header {
   display: flex;
   justify-content: space-between;
-  padding: 6px 0;
-}
-
-.coverage-row:not(:last-child) {
-  border-bottom: 1px solid #f5f5f5;
-}
-
-.coverage-label {
-  font-size: 13px;
-  color: var(--ck-text-secondary);
-}
-
-.coverage-value {
-  font-size: 13px;
-  color: var(--ck-text-primary);
-  font-weight: 500;
-}
-
-.connected-badge {
-  display: inline-flex;
   align-items: center;
-  gap: 5px;
-  padding: 4px 10px;
-  background: var(--ck-green-light);
-  color: var(--ck-green);
-  border-radius: 20px;
-  font-size: 11px;
-  font-weight: 600;
-  margin-top: 14px;
+  width: 311px;
 }
 
-.connected-dot {
-  width: 6px;
-  height: 6px;
-  background: var(--ck-green);
-  border-radius: 50%;
+.payment-rating-label-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.payment-rating-label {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.15;
+  color: var(--kds-color-text-primary);
+}
+
+.payment-rating-info {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.payment-rating-bar {
+  height: 16px;
+  width: 64px;
+  object-fit: cover;
+}
+
+.payment-rating-value {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  color: var(--kds-color-text-primary);
+}
+
+.payment-rating-description {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--kds-color-text-primary);
+  width: 311px;
 }
